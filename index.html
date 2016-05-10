@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slam Book</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="slam.js"></script>
+</head>
+<body ng-app="slambook">
+<div ng-controller="formCtrl">
+	<form>
+		Name:<input type="text" ng-model="user.name"><br><br>
+		Loved One call me as:<input type="text" ng-model="user.lovedone"><br><br>
+		My Hobbies:<input type="text" ng-model="user.hobbies"><br><br>
+		Things I Love About you:<input type="text" ng-model="user.love"><br><br>
+		Call me at:<input type="text" ng-model="user.mobile"><br><br>
+		Mail me at:<input type="text" ng-model="user.mail"><br><br>
+		My B'day:<input type="text" ng-model="user.bday"><br><br>
+		Sweet Memories with you?:<input type="text" ng-model="user.memories"><br><br>
+		Person I admire the most:<input type="text" ng-model="user.admire"><br><br>
+		Secret I wanna share with you:<input type="text" ng-model="user.secrets"><br><br>
+		Dream of becoming:<input type="text" ng-model="user.dream"><br><br>
+		<button ng-click='saveSlam()'>greet</button>
+	</form>
+	<h1>{{getvalue.name}}</h1>
+</div>
+
+</body>
+</html>
