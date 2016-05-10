@@ -6,22 +6,26 @@
 <script src="slam.js"></script>
 </head>
 <body ng-app="slambook">
-<div ng-controller="formCtrl">
+<div ng-controller="slamBookController">
+	<div data-ng-if="content">
 	<form>
 		Name:<input type="text" ng-model="user.name"><br><br>
 		Loved One call me as:<input type="text" ng-model="user.lovedone"><br><br>
 		My Hobbies:<input type="text" ng-model="user.hobbies"><br><br>
 		Things I Love About you:<input type="text" ng-model="user.love"><br><br>
 		Call me at:<input type="text" ng-model="user.mobile"><br><br>
-		Mail me at:<input type="text" ng-model="user.mail"><br><br>
+		Mail me at:<input type="email" ng-model="user.mail"><br><br>
 		My B'day:<input type="text" ng-model="user.bday"><br><br>
 		Sweet Memories with you?:<input type="text" ng-model="user.memories"><br><br>
 		Person I admire the most:<input type="text" ng-model="user.admire"><br><br>
 		Secret I wanna share with you:<input type="text" ng-model="user.secrets"><br><br>
 		Dream of becoming:<input type="text" ng-model="user.dream"><br><br>
-		<button ng-click='saveSlam()'>greet</button>
+		<button ng-click='saveSlam()'>Save</button>
 	</form>
-	<h1>{{getvalue.name}}</h1>
+	</div>
+	<div data-ng-if="IsHidden">
+		<h1>Hi am {{user.name}} Loved ones call me as {{user.lovedone}}, my hobbies are {{user.hobbies}} The things I love about you is {{user.love}} to reach me you can call me anytime on {{user.mobile}} or mail me @{{user.mail}}.............</h1>
+	</div>
 </div>
 
 </body>
